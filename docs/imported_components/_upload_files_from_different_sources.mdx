@@ -1,0 +1,38 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+:::tip Файлы образцов можно загрузить:
+
+<Tabs
+  defaultValue="pc"
+  values={[
+    {label: 'С компьютера', value: 'pc'},
+    {label: 'С серверов FTP, HTTP или Яндекс.Диск', value: 'url'},
+    {label: 'C Google Диск', value: 'google'},
+    {label: 'Из базы NCBI SRA', value: 'sra'}]}>
+  <TabItem value="pc"><p align="center">Для загрузки перетащите файлы или папку, содержащую файлы, в окно или
+  нажмите на него, чтобы открыть диспетчер файлов:<br />
+  	<img src={require('/img/rus/9-drag-drop-box.png').default} width="300"/></p>
+  </TabItem>
+  <TabItem value="url"><p align="center">Для загрузки вставьте ссылку на файл или папку, содержащую файлы,
+  на сервере в окно:<br />
+  	<img src={require('/img/rus/10-12-url-box.png').default} width="350"/><br />
+  и нажмите на кнопку <img src={require('/img/rus/11-13-url_active.png').default} width="35"/> или на клавишу Enter
+  на клавиатуре.</p>
+  </TabItem>
+  <TabItem value="google"><p align="center">Для загрузки файла с Google Диск сначала предоставьте доступ
+  к этому файлу всем, у кого есть ссылка (как это сделать,
+  описано <a href="https://support.google.com/drive/answer/2494822?hl=ru&ref_topic=7000947&sjid=1697686373900275697-EU#zippy=%2C%D0%BA%D0%B0%D0%BA-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C-%D1%84%D0%B0%D0%B9%D0%BB-%D0%BE%D0%B1%D1%89%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D1%8B%D0%BC">здесь</a>).
+  Получившуюся ссылку вставьте в окно:<br />
+  	<img src={require('/img/rus/10-12-url-box.png').default} width="350"/><br />
+  и нажмите на кнопку <img src={require('/img/rus/11-13-url_active.png').default} width="35"/> или на клавишу Enter
+  на клавиатуре.</p>
+  </TabItem>
+  <TabItem value="sra"><p align="center">Для загрузки вставьте код образца из NCBI SRA
+  (например, <a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR24755541&display=metadata">SRR24755541</a>)
+  в окно:<br />
+  	<img src={require('/img/rus/10-12-url-box.png').default} width="350"/><br />
+  и нажмите на кнопку <img src={require('/img/rus/11-13-url_active.png').default} width="35"/> или на клавишу Enter
+  на клавиатуре.</p>
+  </TabItem></Tabs>
+:::

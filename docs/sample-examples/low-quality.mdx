@@ -1,0 +1,24 @@
+---
+sidebar_position: 4
+sidebar_label: Пример образца с низким качеством данных
+---
+
+# Пример образца с низким качеством данных
+
+Если данные образца низкого качества, то одна из стадий пайплайна завершится с ошибкой 
+(в статусе стоит красный значок <img src={require('/img/results/failed.png').default} width="25"/>).
+Например, у данного образца задача “Оценка количества или глубины прочтений” завершилась с ошибкой,
+поскольку образец имеет очень низкое покрытие. Если данные низкого качества, анализ CNV не будет проведен,
+отчёт по CNV не построится.
+
+<p align="center">
+<img src={require('/img/rus/48-main-page-low-data-quality.png').default} width="800"/>
+</p>
+
+import SpecialMarks from '/docs/imported_components/_medium_or_low_patient_cnv_report.mdx';
+
+<SpecialMarks mark="анализ не проведен, программная ошибка" />
+
+<p align="center">
+<img src={require('/img/rus/49-cnv-report-low-data-quality.png').default} width="900"/>
+</p>
