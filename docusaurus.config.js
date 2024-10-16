@@ -6,7 +6,7 @@ module.exports = {
     title: 'NIPT helicon',
     tagline: 'Dinosaurs are cool',
     url: 'https://genomenal.ru',
-    baseUrl: '/nipt-helicon/',
+    baseUrl: '/nipt/',
     onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.png',
