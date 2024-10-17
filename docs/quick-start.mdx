@@ -1,0 +1,112 @@
+---
+sidebar_position: 5
+sidebar_label: Быстрый старт для неинвазивного пренатального скрининга
+---
+
+# Быстрый старт для неинвазивного пренатального скрининга
+
+Для проведения неинвазивного пренатального тестирования (НИПТ) с помощью NIPT Helicon воспользуйтесь
+рекомендациями из этого раздела.
+
+import Login from '/docs/imported_components/_login.mdx';
+
+<Login />
+
+### 1. Создайте запуск {#create-run}
+
+Чтобы создать [запуск](/nipt/runs), нажмите
+на <img src={require('/img/runs/add_run.png').default} width="150"/> на странице "Образцы":
+
+<p align="center">
+<img src={require('/img/rus/empty_sample_page.png').default} width="900"/>
+</p>
+
+В появившемся окне введите название запуска:
+
+<p align="center">
+<img src={require('/img/runs/add_run_modal.png').default} height="350"/>
+</p>
+
+и нажмите на <img src={require('/img/runs/create_btn.png').default} width="130"/>.
+Вы увидите страницу загрузки образцов в запуск:
+
+<p align="center">
+<img src={require('/img/runs/new_run_page.png').default} width="900"/>
+</p>
+
+### 2. Загрузите образцы {#upload-samples}
+
+Выберите [образцы для анализа](/nipt/uploading-samples/data-for-analysis).
+NIPT helicon поддерживает файлы с одиночными или парными прочтениями в формате FASTQ, полученные в
+результате секвенирования свободно-циркулирующей ДНК плазмы крови.
+
+import UploadFiles from '/docs/imported_components/_upload_files_from_different_sources.mdx';
+
+<UploadFiles />
+
+### 3. Запустите анализ {#start-analysis}
+
+Нажмите на <img src={require('/img/rus/start_analysis_btn.png').default} width="200"/>,
+чтобы начать неинвазивный пренатальный скрининг образцов. Вы увидите страницу запуска с
+добавленными образцами:
+
+<p align="center">
+<img src={require('/img/runs/beginning.png').default} width="900"/>
+</p>
+
+import DangerUploading from '/docs/imported_components/_danger_while_uploading.mdx';
+
+<DangerUploading />
+
+Вы можете понять, что анализ образца успешно завершен, если все статусы стадий анализа
+стали зелеными или оранжевыми:
+
+<p align="center">
+<img src={require('/img/rus/7a-stage-statuses.png').default} width="150"/>
+</p>
+
+## 4. Результаты анализа {#analysis-results}
+
+После завершения анализа вы можете ознакомиться с его результатами. Откройте страницу образца, нажав на его строку:
+
+<p align="center">
+<img src={require('/img/runs/sample_of_run.png').default} width="900"/>
+</p>
+
+### Отчет НИПТ {#nipt-report}
+
+Чтобы посмотреть результаты неинвазивного пренатального скрининга, откройте вкладку **Отчет НИПТ**:
+
+<p align="center">
+<img src={require('/img/rus/nipt_report.png').default} width="1000"/>
+</p>
+
+В таблице приведены уровни риска хромосомных аномалий у плода, а также
+значения определённого пола плода и фракции фетальной ДНК.
+
+Отчет можно экспортировать в формате PDF,
+нажав на кнопку <img src={require('/img/results/export_pdf.png').default} width="150"/>.
+
+### Биоинформатический отчёт {#bioinformatic-report}
+
+Чтобы убедиться, что секвенирование проведено качественно,
+ознакомьтесь с **[Биоинформатическим отчётом](/nipt/results/bioinformatic-report)**, в котором приведены
+метрики качества исходных данных, качества выравнивания и покрытия данных.
+
+### Полногеномный график копийности {#copy-ratio-graph}
+
+В качестве визуализации результата выявления вариации числа копий в образце
+на вкладке **[Главное](/nipt/results/main/main)** в разделе **[Вариации числа копий](/nipt/results/main/cnvs)**
+приведён полногеномный график копийности. Откройте его,
+нажав на кнопку <img src={require('/img/rus/25-plot_file.png').default} width="45"/>:
+
+<p align="center">
+<img src={require('/img/rus/cnv-graph.png').default} width="1000"/>
+</p>
+
+Вы увидите два графика с разным масштабом копийности. На горизонтальной оси графиков располагаются хромосомы,
+а на вертикальной - их копийность. Пример графика с увеличенной копийностью хромосомы 21:
+
+<p align="center">
+<img src={require('/img/rus/28-genome-wide-plot.png').default} width="1000"/>
+</p>
