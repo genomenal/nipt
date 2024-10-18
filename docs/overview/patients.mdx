@@ -39,9 +39,11 @@ sidebar_label: Пациенты
 и <img src={require('/img/rus/add_patient_btn.png').default} width="150"/>,
 открывающая окно <a href="/add-patient">создания пациента</a>. Кроме того, при наведении курсора на строку
 пациента появляются следующие активные
-элементы: <img src={require('/img/rus/upload_in_patient.png').default} width="19"/> позволяет
-загрузить данные пациента, а <img src={require('/img/rus/delete_btn.png').default} width="20"/> -
+элементы: <img src={require('/img/rus/upload_in_patient.png').default} width="19"/> позволяет <a href="/nipt/uploading-samples/additional-upload-for-patient">загрузить данные пациента</a>, <img src={require('/img/rus/forbid_edit_on_patients_page.png').default} width="19"/> - <a href="/nipt/add-patient#forbid-edit">запретить редактирование данных пациента</a>,
+а <img src={require('/img/rus/delete_btn.png').default} width="20"/> -
 архивировать данные пациента.
+В строке пациента с запретом редактирования данных будет только кнопка для разрешения
+редактирования данных: <img src={require('/img/rus/allow_edit_on_patients_page.png').default} width="20"/>.
 
 - “***Архив***” - содержит тех пациентов, данные которых были архивированы. Вы можете перенести сюда
 неактуальные данные или данные, которые вы хотите удалить. Пациенты, находящиеся в "Архиве", не отображаются
@@ -69,7 +71,9 @@ sidebar_label: Пациенты
 ### Колонки {#patients-columns}
 
 На страницах блока "Пациенты" информация представлена в виде таблицы со следующими колонками:
-1. **ПАЦИЕНТ** - информация о созданных пациентах (код, имя, фамилия пациента);
+1. **ПАЦИЕНТ** - информация о созданных пациентах (код, имя, фамилия пациента).
+Если данные пациента запрещено редактировать, то слева от информации о пациенте будет отображена
+иконка <img src={require('/img/rus/patient_with_no_edit.png').default} width="22"/>.
 2. **СТАТУС** - статусы образцов каждого
 пациента:<br></br><img src={require('/img/rus/in_process_status.png').default} width="22"/> - образец
 обрабатывается;<br></br><img src={require('/img/rus/queed_status.png').default} width="14"/> - образец
