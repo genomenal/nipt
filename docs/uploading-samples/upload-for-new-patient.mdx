@@ -9,11 +9,22 @@ import StartUpload from '/docs/imported_components/_add_patient.mdx';
 
 <StartUpload />
 
+<p align="center">
+<img src={require('/img/rus/upload_for_new_patient.png').default} width="900"/>
+</p>
+
+### Загрузка образцов {#upload-samples}
+
+Загрузите выбранные образцы одним из предложенных ниже способов.
+Требования к образцам описаны [здесь](/nipt/uploading-samples/data-for-analysis).
+
 import SeveralSamples from '/docs/imported_components/_upload_several_samples.mdx';
 
 <SeveralSamples sample_type="одного" />
 
-![Загрузка файлов в формате FASTQ](/img/upload_germline.png)
+<p align="center">
+<img src={require('/img/rus/another_upload_window.png').default} width="900"/>
+</p>
 
 import UploadFiles from '/docs/imported_components/_upload_files_from_different_sources.mdx';
 
@@ -28,19 +39,14 @@ import RecognizePair from '/docs/imported_components/_recognize_pair.mdx';
 
 <RecognizePair />
 
-#### Объединение дорожек секвенирования {#merge-lanes}
-
-import MergeLanes from '/docs/imported_components/_merge_lanes.mdx';
-
-<MergeLanes />
-
 ### Настройки анализа {#analysis-settings}
 
-Для загружаемого образца или образцов можно поменять настройку анализа. По умолчанию выбрана настройка,
-которая отмечена как настройка по умолчанию на странице "Настройки". Для образца можно выбрать настройку
-среди добавленных в систему предварительных установок настроек. Настройки влияют на включение в анализ
+Выберите нужную [настройку анализа](/settings/settings/settings) загружаемых образцов.
+Настройку, выбранную по умолчанию, можно поменять, как
+описано [здесь](/nipt/settings/settings/settings#set-preset-as-default).
+Настройки влияют на включение в анализ
 контроля качества и его параметры, на включение в анализ выравнивания и его параметры, а также на
-включение в анализ выявления вариации числа копий. После начала анализа образца его параметры изменить
+включение в анализ выявления вариации числа копий. После начала анализа его параметры изменить
 невозможно.
 
 ### Уровень НИПТ {#nipt-level}
@@ -56,12 +62,12 @@ import MergeLanes from '/docs/imported_components/_merge_lanes.mdx';
 18 хромосомы), синдрома Дауна (трисомии 21 хромосомы), а также половых анеуплоидий: синдрома Клайнфельтера
 (XXY; дисомии Х-хромосомы) и синдрома Шерешевского-Тёрнера (X0; моносомии X-хромосомы).
 
-Этот параметр повлияет на отображение результатов в медицинском отчёте.
+Этот параметр повлияет на отображение результатов в [медицинском отчёте](/nipt-report).
 
 ### Пол плода {#fetus-sex}
 
-По умолчанию пол плода, определённый в результате исследования, отображается в отчёте. Это можно отключить для
-загружаемого образца.
+По умолчанию пол плода, определённый в результате исследования, отображается в [отчёте](/nipt-report).
+Это можно отключить для загружаемого образца.
 
 ### Многоплодная беременность {#multiple-pregnancy}
 

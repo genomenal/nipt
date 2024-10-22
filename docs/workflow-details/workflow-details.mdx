@@ -6,7 +6,7 @@ sidebar_label: Детали процесса анализа
 # Детали процесса анализа
 
 Получить подробную информацию о процессе анализа образцов, статусе выполнения стадий анализа, а также
-скачать файлы с результатами стадий можно на вкладке "**Детали процесса анализа**" на странице образца:
+скачать файлы с результатами стадий можно на вкладке "*Детали процесса анализа*" на странице образца:
 
 <p align="center">
 <img src={require('/img/rus/18-workflow-details.png').default} width="1000"/>
@@ -14,7 +14,7 @@ sidebar_label: Детали процесса анализа
 
 Кроме того, вы можете посмотреть детали каждой стадии анализа по отдельности, нажав
 на кнопку <img src={require('/img/results/show_details.png').default} width="25"/> в строке этой
-стадии в разделе <a href="/results/main/main#workflow">"Процесс анализа"</a> на вкладке "Главное" на
+стадии в разделе <a href="/results#workflow">"Процесс анализа"</a> на вкладке "Главное" на
 странице образца. Чтобы из деталей определенной стадии перейти к деталям всего процесса анализа образца,
 нажмите на <img src={require('/img/rus/show_all_tasks.png').default} width="150"/>.
 
@@ -46,7 +46,7 @@ FASTQ файлы, обратитесь в поддержку [info@genomenal.com
 После удаления файлов станет невозможным перезапуск стадий анализа, использующих файлы выравнивания:
 "Вычисление покрытия" и "Выявление вариации числа копий".
 На вкладке "Главное" не будут отображаться результаты выравнивания
-(секция ["Выравнивания"](/results/main/alignments)), а в деталях задачи "Выравнивание"
+(секция ["Выравнивания"](/results#alignments)), а в деталях задачи "Выравнивание"
 в разделе "Файлы с результатами" не будут отображаться файлы в форматах BAM и BAI.
 Чтобы восстановить файлы выравнивания, перезапустите стадию "Выравнивание".
 
@@ -111,26 +111,24 @@ FASTQ файлы, обратитесь в поддержку [info@genomenal.com
 в виде [предустановки настроек](/settings/settings/settings).
 
 Анализ образца может включать следующие стадии:
-1. [Загрузка, идентификация и проверка](/results/workflow-details/fastq-analysis/upload-identify-verify);
-2. [Проверка качества и очистка](/results/workflow-details/fastq-analysis/check-quality-and-cleanup);
-3. [Выравнивание](/results/workflow-details/fastq-analysis/alignment), если в
+1. [Загрузка, идентификация и проверка](/workflow-details/upload-identify-verify);
+2. [Проверка качества и очистка](/workflow-details/check-quality-and-cleanup);
+3. [Выравнивание](/workflow-details/alignment), если в
 анализ [включено выравнивание](/settings/settings/alignment-settings);
-4. [Вычисление покрытия](/results/workflow-details/fastq-analysis/calculate-coverage), если в анализ включена
-хотя бы одна из стадий последующего анализа: выявление SNVs/Indels, структурных вариаций,
-вариации числа копий или предсказание фенотипов или вычисление полигенных рисков;
-5. [Выявление вариации числа копий](/results/workflow-details/fastq-analysis/cnv-discovery), если в
-анализ [включено выявление вариации числа копий](/settings/settings/variant-discovery-settings#cnv-discovery);
-6. [Генерация отчётов](/results/workflow-details/fastq-analysis/report-generation), если:
+4. [Вычисление покрытия](/workflow-details/calculate-coverage), если в анализ
+[включено выявление вариации числа копий](/settings/settings/cnv-discovery-settings);
+5. [Выявление вариации числа копий](/workflow-details/cnv-discovery), если в
+анализ [включено выявление вариации числа копий](/settings/settings/cnv-discovery-settings);
+6. [Генерация отчётов](/workflow-details/report-generation), если:
 - В системе есть хотя бы один активный [шаблон отчёта](/settings/report-templates/report-templates), у
 которого есть хотя бы один [добавленный блок](/settings/report-templates/report-templates#add-block).
 При этом шаблон отчёта должен быть добавлен в систему раньше, чем был обработан образец.
 Если вы добавили или обновили шаблон
 отчёта позже и хотите построить или обновить соответствующий отчёт для данного образца, то перезапустите
 анализ образца с задачи "*Генерация отчётов*".
-- В анализ образца включены выравнивание
-и ["Выявление вариации числа копий"](/results/workflow-details/fastq-analysis/cnv-discovery).
+- В анализ образца включены выравнивание и выявление вариации числа копий.
 - Анализ образца успешно завершился (то есть все стадии, включённые в анализ, имеют статус "*Завершено*").
 
 <p align="center">
-<img src={require('/img/rus/fq_pipeline.png').default} width="1000"/>
+<img src={require('/img/rus/fq_pipeline.png').default} width="600"/>
 </p>
