@@ -5,20 +5,17 @@ sidebar_label: Вычисление покрытия
 
 # Вычисление покрытия
 
-На данном этапе рассчитывается покрытие генов и целевых участков
-выравниваниями прочтений образца. Эти показатели важны для оценки качества картирования в целом и
-на интересующих вас областях (генах, транскриптах).
-Вычисление покрытия запускается после успешного выполнения стадии
-["Выравнивание"](/results/workflow-details/fastq-analysis/variant-discovery-preprocessing).
+На данном этапе рассчитывается понуклеотидное покрытие выровненных последовательностей образца на референсный геном.
+Этот показатель важен для оценки качества картирования. Результат вычисления представлен
+в ["Биоинформатическом отчёте"](/bioinformatic-report#coverage-report).
+Вычисление покрытия запускается после успешного выполнения стадии ["Выравнивание"](/workflow-details/alignment),
+если в анализ образца включена
+стадия [выявления вариации числа копий](/settings/settings/cnv-discovery-settings).
 
 <p align="center">
-<img src={require('/img/rus/calculate_coverage.png').default} width="700"/>
+<img src={require('/img/rus/calculate_coverage.png').default} width="600"/>
 </p>
 
-Стадия анализа образца "Вычисление покрытия" включает одноименную задачу. Ход выполнения задачи следующий:
-- [bedtools coverage](https://bedtools.readthedocs.io/en/latest/content/tools/coverage.html)
-вычисляет глубину и широту покрытия выравниваний прочтений образца
-экзонами из [Ensembl](https://www.ensembl.org/index.html) и
-строит гистограмму покрытия для каждого экзона и сводную гистограмму для всех экзонов.
-- [bedtools genomecov](https://bedtools.readthedocs.io/en/latest/content/tools/genomecov.html)
+Стадия анализа образца "Вычисление покрытия" включает одноименную задачу. Во время её выполнения
+[bedtools genomecov](https://bedtools.readthedocs.io/en/latest/content/tools/genomecov.html)
 вычисляет гистограммы покрытия выровненных последовательностей образца на референсный геном.

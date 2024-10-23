@@ -46,7 +46,8 @@ sidebar_label: Биоинформатический отчёт
    <td>Метрика</td>
    <td>Описание</td>
    <td>Значение порога метрики, при котором прочтения в образце считаются качественными (значение по умолчанию, может
-   быть изменено в <a href="/settings/settings/quality-control-settings#change-metric-thresholds">настройках</a>)</td>
+   быть изменено в <a href="/settings/settings/quality-control-settings#change-metric-thresholds">предустановке
+   настроек</a>, используемой во время загрузки образцов)</td>
   </tr>
   <tr>
    <td>Total sequences</td>
@@ -159,7 +160,8 @@ sidebar_label: Биоинформатический отчёт
    <td>Метрика</td>
    <td>Описание метрики</td>
    <td>Значение порога метрики по умолчанию (может быть изменено
-   в <a href="/settings/settings/alignment-settings#change-metric-thresholds">настройках</a>)</td>
+   в <a href="/settings/settings/alignment-settings#change-metric-thresholds">предустановке настроек</a>,
+   используемой во время загрузки образцов)</td>
   </tr>
   <tr>
    <td><b>Mapped reads</b></td>
@@ -200,13 +202,16 @@ sidebar_label: Биоинформатический отчёт
 ### Отчёт по покрытию {#coverage-report}
 
 :::note На заметку
-Раздел есть только у образцов, для которых [выравнивание](/settings/settings/alignment-settings) было включено в
-пайплайн и успешно завершилось.
+Раздел есть только у образцов, для которых [выявление вариации числа копий](/settings/settings/cnv-discovery-settings)
+было включено в
+пайплайн, а стадия [вычисления покрытия](/workflow-details/calculate-coverage) успешно завершилась.
 :::
 
 Отчёт по покрытию генома данными позволяет оценить, насколько информативен анализ этих данных в целом.
 Отчёт включет метрику **Coverage per nucleotide** - понуклеотидное покрытие на геноме.
-Порог метрики - &ge; 0.1. Если метрика
+Порог метрики - &ge; 0.1 (значение по умолчанию, может быть изменено
+в [предустановке настроек](/settings/settings/alignment-settings#change-metric-thresholds),
+используемой во время загрузки образцов). Если метрика
 удовлетворяет порогу качества, она отмечена <img src={require('/img/rus/default_setting.png').default} width="27"/>,
 а если не удовлетворяет, то <img src={require('/img/rus/44-warning-status.png').default} width="30"/>.
 
