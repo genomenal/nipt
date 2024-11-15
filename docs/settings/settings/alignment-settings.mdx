@@ -17,7 +17,7 @@ sidebar_label: Настройки выравнивания
 ### Отключение выравнивания {#disable-alignment}
 
 :::info На заметку
-При отключении выравнивания выявление вариации числа копий невозможно.
+Если выравнивание исключено из анализа, проведение неинвазивного пренатального скрининга становится невозможным.
 :::
 
 Если вы хотите отключить выравнивание, выключите соответствующий тумблер:
@@ -43,15 +43,9 @@ sidebar_label: Настройки выравнивания
 
 ### Смена инструмента для выравнивания {#change-alignment-tool}
 
-Помимо стоящего по умолчанию *BWA2 Burrows-Wheeler Aligner* для выбора доступны следующие
-инструменты для выравнивания:
-
-- *BWA Burrows-Wheeler Aligner* - более ранняя версия алгоритма BWA-MEM[^2].
-- *Bowtie2*[^3]
-- *HISAT2*[^4]
-- *STAR*[^5]
-
-Для смены инструмента для выравнивания нажмите на значение поля "Alignment tools" и выберите нужный выравниватель:
+Инструментом для выравнивания по умолчанию является *BWA2 Burrows-Wheeler Aligner*.
+Его можно поменять на *BWA Burrows-Wheeler Aligner* - более раннюю версию алгоритма BWA-MEM[^2].
+Для этого нажмите на значение поля "*Alignment tool*" и выберите нужный выравниватель:
 
 <p align="center">
 <img src={require('/img/rus/change_alignment_tool.png').default} width="420"/>
@@ -69,10 +63,6 @@ sidebar_label: Настройки выравнивания
 <p align="center">
 <img src={require('/img/rus/singletons.png').default} width="400"/>
 </p>
-
-:::note На заметку
-Данная опция доступна только при использовании выравнивателей BWA и BWA2.
-:::
 
 ### Метрики оценки качества выравнивания {#alignment-metrics}
 
@@ -123,16 +113,13 @@ sidebar_label: Настройки выравнивания
 то файл отмечается как не удовлетворяющий требованиям метрики, т.е. выравнивание завершается успешно,
 а в статусе стадии указывается количество метрик, которые не соответствуют критериям.
 Если же никакие прочтения образца не выровнялись на геном,
-то [стадия "Выравнивание"](/results/workflow-details/fastq-analysis/alignment) завершается с ошибкой
+то [стадия "Выравнивание"](/workflow-details/alignment) завершается с ошибкой
 и анализ останавливается.
 
 ### Изменение порогов метрик {#change-metric-thresholds}
 
-Чтобы изменить значение порога метрики, нажмите на текущее значение и отредактируйте. Для сохранения изменений нажмите
-клавишу "Enter" или кликните левой кнопкой мыши в свободное место на странице.
+Чтобы изменить значение порога метрики, нажмите на текущее значение и отредактируйте его.
+Для сохранения изменений нажмите клавишу "Enter" или кликните левой кнопкой мыши в свободное место на странице.
 
 [^1]: [Vasimuddin M., Sanchit M., Heng L., Srinivas A. Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems. IEEE Parallel and Distributed Processing Symposium (IPDPS) (2019)](https://doi.org/10.1109/IPDPS.2019.00041)
 [^2]: [Li H. Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. arXiv:1303.3997v2 (2013)](https://doi.org/10.48550/arXiv.1303.3997)
-[^3]: [Langmead B., Salzberg S. Fast gapped-read alignment with Bowtie 2. Nature Methods 9, 357:359 (2012)](https://doi.org/10.1038/nmeth.1923)
-[^4]: [Kim D., Paggi J.M., Park C. et al. Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype. Nat Biotechnol 37, 907:915 (2019)](https://doi.org/10.1038/s41587-019-0201-4)
-[^5]: [Dobin A., Davis C.A., Schlesinger F. et al. STAR: ultrafast universal RNA-seq aligner. Bioinformatics 29(1), 15:21 (2013)](https://doi.org/10.1093/bioinformatics/bts635)
