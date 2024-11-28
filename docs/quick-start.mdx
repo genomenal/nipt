@@ -37,7 +37,7 @@ import Login from '/docs/imported_components/_login.mdx';
 ### 2. Загрузите образцы {#upload-samples}
 
 Выберите [образцы для анализа](/nipt/uploading-samples/data-for-analysis).
-NIPT helicon поддерживает файлы с одиночными или парными прочтениями в формате FASTQ, полученные в
+NIPT helicon поддерживает файлы в формате FASTQ, полученные в
 результате секвенирования свободно-циркулирующей ДНК плазмы крови.
 
 import UploadFiles from '/docs/imported_components/_upload_files_from_different_sources.mdx';
@@ -58,11 +58,13 @@ import DangerUploading from '/docs/imported_components/_danger_while_uploading.m
 
 <DangerUploading />
 
-Вы можете понять, что анализ образца успешно завершен, если все статусы стадий анализа
-стали зелеными или оранжевыми:
+Вы можете понять, что анализ образца успешно завершен по чёрному
+кружку <img src={require('/img/rus/normal_success.png').default} width="18"/>
+в статусе его обработки и по заполненности колонок "*Выровненных ридов / всего ридов (%)*", "*Фетальная фракция ДНК*"
+и "*Результаты*":
 
 <p align="center">
-<img src={require('/img/rus/7a-stage-statuses.png').default} width="150"/>
+<img src={require('/img/runs/run_done.png').default} width="900"/>
 </p>
 
 ## 4. Результаты анализа {#analysis-results}
@@ -75,14 +77,14 @@ import DangerUploading from '/docs/imported_components/_danger_while_uploading.m
 
 ### Отчет НИПТ {#nipt-report}
 
-Чтобы посмотреть результаты неинвазивного пренатального скрининга, откройте вкладку **[Отчет НИПТ](/nipt-report)**:
+Чтобы посмотреть результаты неинвазивного пренатального скрининга, откройте вкладку **[Отчёт НИПТ](/nipt-report)**:
 
 <p align="center">
 <img src={require('/img/rus/nipt_report.png').default} width="1000"/>
 </p>
 
 В таблице приведены уровни риска хромосомных аномалий у плода, а также
-значения определённого пола плода и фракции фетальной ДНК.
+предполагаемый пол плода и значение фракции фетальной ДНК.
 
 Отчет можно экспортировать в формате PDF,
 нажав на кнопку <img src={require('/img/results/export_pdf.png').default} width="150"/>.
@@ -90,13 +92,13 @@ import DangerUploading from '/docs/imported_components/_danger_while_uploading.m
 ### Биоинформатический отчёт {#bioinformatic-report}
 
 Чтобы убедиться, что секвенирование проведено качественно,
-ознакомьтесь с **[Биоинформатическим отчётом](/nipt/results/bioinformatic-report)**, в котором приведены
+ознакомьтесь с **[Биоинформатическим отчётом](/bioinformatic-report)**, в котором приведены
 метрики качества исходных данных, качества выравнивания и покрытия данных.
 
 ### Полногеномный график копийности {#copy-ratio-graph}
 
 В качестве визуализации результата выявления вариации числа копий в образце
-на вкладке **[Главное](/nipt/results/main/main)** в разделе **[Вариации числа копий](/nipt/results/main/cnvs)**
+в разделе **[Вариации числа копий](/results#cnvs)**
 приведён полногеномный график копийности. Откройте его,
 нажав на кнопку <img src={require('/img/rus/25-plot_file.png').default} width="45"/>:
 
