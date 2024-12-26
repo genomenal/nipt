@@ -23,19 +23,9 @@ module.exports = {
             },
             items: [],
         },
-        footer: {
-            style: 'dark',
-            links: [],
-            copyright: `© 2019-2024 Novel Software Systems. Все права защищены.`,
-        },
         prism: {
             theme: lightCodeTheme,
             darkTheme: darkCodeTheme,
-        },
-        algolia: {
-            apiKey: 'dbf798e1335cbc57fae603c4eb582fe4',
-            indexName: 'nipt',
-            appId: 'DZAOFCP7KJ',
         },
     },
     presets: [

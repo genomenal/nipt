@@ -59,9 +59,10 @@ import DangerUploading from '/docs/imported_components/_danger_while_uploading.m
 <DangerUploading />
 
 Вы можете понять, что анализ образца успешно завершен по чёрному
-кружку <img src={require('/img/rus/normal_success.png').default} width="18"/>
-в статусе его обработки и по заполненности колонок "*Выровненных ридов / всего ридов (%)*", "*Фетальная фракция ДНК*"
-и "*Результаты*":
+кружку <img src={require('/img/rus/normal_success.png').default} width="18"/> (или оранжевому
+кружку <img src={require('/img/rus/normal_problems.png').default} width="18"/>, если образец не удовлетворяет
+критериям качества для проведения НИПС) в статусе его обработки и по заполненности колонок
+"*Выровненных ридов / всего ридов (%)*", "*Фетальная фракция ДНК*" и "*Результат*":
 
 <p align="center">
 <img src={require('/img/runs/run_done.png').default} width="900"/>
@@ -69,7 +70,8 @@ import DangerUploading from '/docs/imported_components/_danger_while_uploading.m
 
 ## 4. Результаты анализа {#analysis-results}
 
-После завершения анализа вы можете ознакомиться с его результатами. Откройте страницу образца, нажав на его строку:
+После завершения анализа вы можете ознакомиться с его результатами. Откройте страницу образца,
+нажав на имя его файла:
 
 <p align="center">
 <img src={require('/img/runs/sample_of_run.png').default} width="900"/>
