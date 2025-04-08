@@ -5,12 +5,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'NIPT helicon',
     tagline: 'Dinosaurs are cool',
-    url: 'https://genomenal.ru',
-    baseUrl: '/nipt/',
+    url: 'http://localhost:8099',
+    baseUrl: '/docs',
     onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.png',
-    organizationName: 'genomenal', // Usually your GitHub org/user name.
+    organizationName: 'Helicon', // Usually your GitHub org/user name.
     projectName: 'nipt', // Usually your repo name.
     themeConfig: {
         navbar: {
@@ -19,7 +19,6 @@ module.exports = {
                 alt: 'Genomenal Logo',
                 src: 'img/NIPT-Helicon-Logo.svg',
                 srcDark: 'img/NIPT-Helicon-Logo.svg',
-                href: 'https://genomenal.ru',
             },
             items: [],
         },
@@ -48,6 +47,6 @@ module.exports = {
     i18n: {
         defaultLocale: 'ru',
         locales: ['ru', 'eu'],
-        localeConfigs: { },
-            },
+        localeConfigs: {},
+    },
 };
