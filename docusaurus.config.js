@@ -5,13 +5,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
     title: 'NIPT helicon',
     tagline: 'Dinosaurs are cool',
-    url: 'http://localhost:8099',
-    baseUrl: '/docs',
+    url: process.env.SITE_URL || 'https://genomenal.ru',
+    baseUrl: process.env.BASE_URL || '/nipt/',
     onBrokenLinks: 'ignore',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.png',
-    organizationName: 'Helicon', // Usually your GitHub org/user name.
-    projectName: 'nipt', // Usually your repo name.
+    organizationName: 'Helicon',
+    projectName: 'nipt',
+    trailingSlash: true,
     themeConfig: {
         navbar: {
             title: '',
@@ -35,8 +36,6 @@ module.exports = {
                     routeBasePath: '/',
                     homePageId: 'intro',
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // editUrl: 'https://github.com/RoadRoller/ngsw-docs-ru/edit/master/website/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -47,6 +46,22 @@ module.exports = {
     i18n: {
         defaultLocale: 'ru',
         locales: ['ru', 'eu'],
-        localeConfigs: {},
+        localeConfigs: {
+            ru: {
+                label: 'Русский',
+                direction: 'ltr',
+            },
+            eu: {
+                label: 'English',
+                direction: 'ltr',
+            },
+        },
+    },
+    customFields: {
+        docker: {
+            port: process.env.PORT || 8099,
+            host: process.env.HOST || '0.0.0.0',
+        },
+        staticDirectories: ['static', 'public'],
     },
 };
