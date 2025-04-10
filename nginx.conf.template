@@ -20,6 +20,11 @@ server {
     gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript;
     gzip_disable "MSIE [1-6]\.";
 
+    # Redirect root to /docs/
+    location = / {
+        rewrite ^(.*)$ /docs$1 permanent;
+    }
+
     # Handle static assets
     location /docs/assets/ {
         root /usr/share/nginx/html;
